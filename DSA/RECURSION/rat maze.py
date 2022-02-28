@@ -68,4 +68,6 @@ y=0
 path=[] 
 s=""
 solve(a,b,n,x,y,ans,path,s) 
-print(ans)    
+print(ans)
+
+#33
