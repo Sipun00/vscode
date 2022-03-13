@@ -4,7 +4,7 @@
 def solve(a,b,i):
     if i==len(a):
         
-            print(b)
+           print(b)
     else:    
     
             
@@ -16,7 +16,8 @@ def solve(a,b,i):
          solve(a,b,i+1) 
     return
     
-a=[1,2,3]
+a=[1,2,3,4,5]
+
 
  
 solve(a,[],0)
