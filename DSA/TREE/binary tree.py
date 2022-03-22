@@ -1,9 +1,9 @@
-class Node:
+class Node:#this is for creation of tree
     def __init__(self,data):
         self.left=None
         self.right=None
         self.data=data
-    def insert(self,data):
+    def insert(self,data):#this is for insert data to left or right of root
         if self.data:
             if data<self.data:
                 if self.left is None:
@@ -17,7 +17,7 @@ class Node:
                     self.right.insert(data)         
         else:
             self.data=data
-    def PrintTree(self,level=0):
+    def PrintTree(self,level=0):#this is to print the tree
         if self.left:
            self.left.PrintTree(level+1)
         print(self.data,end=' ')
@@ -25,7 +25,7 @@ class Node:
         if self.right:
            self.right.PrintTree(level+1)  
               
-    def PrintTreeinshape(self,level=0):
+    def PrintTreeinshape(self,level=0):#this is for diagram presernation of tree
         if self.right:
             self.right.PrintTreeinshape(level+1)
         #print(self.data,sep="  ")
@@ -59,10 +59,10 @@ class Node:
 # root.insert(14)
 # root.insert(3)
 # root.PrintTree()
-b=int(input(" Root node::"))
+b=int(input(" Root node::"))#this is where we will take input for root
 root=Node(b)
 c=True
-while(True):
+while(True):#this is for leaf node
     a=int(input("if you want to stop enter -1/////else enter  leaf node::"))
     if a==-1:
         break
