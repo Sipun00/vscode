@@ -19,7 +19,7 @@ class Node:
             self.data=data
 
 def height(root):#this is the main function for height
-    
+
 
     if root is None:
         return 0
@@ -34,4 +34,5 @@ while(True):
         break
     else:
         root.insert(a)
-print(height(root))
+print(height(root))#
+
