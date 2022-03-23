@@ -34,5 +34,6 @@ while(True):
         break
     else:
         root.insert(a)
-print(height(root))#
+print(height(root))
+
 
