@@ -33,7 +33,7 @@ class Node:                 #creation of tree
         else:
             self.data=data
 
-
+ 
 
 class Solution:
 
