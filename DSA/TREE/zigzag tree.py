@@ -32,7 +32,7 @@ class Node:
         self.right = None
 '''
 def zigzag(queue,root):
-    if(root==null):
+    if(root==None):
         return
     
     

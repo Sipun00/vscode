@@ -120,7 +120,7 @@ def buildTree(s):
     return root
     
     
-if __name__=="__main__":
+if __name__=="__main__": 
     
 
     s=input("ELEMENT OF TREE,, FOR NONE TYPE N")

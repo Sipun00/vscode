@@ -1,36 +1,3 @@
-class Solution:
-    
-    #Function to find the vertical order traversal of Binary Tree.
-    def verticaltraversal(self,root,h_dist,v_dist,values):
-        if not root:
-            return
-        if h_dist in values:
-            values[h_dist].append((v_dist,root.data))
-            
-        else:
-            values[h_dist]=[(v_dist,root.data)]
-        self.verticaltraversal(root.left,h_dist-1,v_dist+1,values)
-        self.verticaltraversal(root.right,h_dist+1,v_dist+1,values)
-    def verticalOrder(self, root): 
-        #Your code here
-        v_dist=0
-        h_dist=0
-        values={}
-        result=[]
-        re=[]
-        self.verticaltraversal(root,h_dist,v_dist,values)
-        
-        
-        for x in sorted(values.keys()):
-            column=[i[1] for  i in sorted(values[x])]
-            result.append(column)
-        for i in result:
-            for j in i:
-                re.append(j)
-                
-        return re
-
-
 from collections import defaultdict
 from collections import deque
 
@@ -96,14 +63,50 @@ def buildTree(s):
             size=size+1
         i=i+1
     return root
+
+
+
+def PrintTreeinshape(root,level=0):#this is for diagram presernation of tree
+    if root.right:
+        PrintTreeinshape(root.right,level+1)
+    #print(self.data,sep="  ")
     
+    print(' ' * 4 * level + '-> ' + str(root.data))
+    if root.left:
+        PrintTreeinshape(root.left,level+1) 
+def printBinaryTree(root, space, height):
+ 
+    # Base case
+    if root is None:
+        return
+ 
+    # increase distance between levels
+    space += height
+ 
+    # print right child first
+    printBinaryTree(root.right, space, height)
+    print()
+ 
+    # print the current node after padding with spaces
+    for i in range(height, space):
+        print(' ', end='')
+ 
+    print(root.data, end='')
+ 
+    # print left child
+    print()
+    printBinaryTree(root.left, space, height)   
 if __name__ == '__main__':
     
     
     s=input("element of tree(__type N for none value__)")
     root=buildTree(s)
-    ob = Solution()
-    res = ob.verticalOrder(root)
-    for i in range (len (res)):
-        print (res[i], end = " ")
+    
+    PrintTreeinshape(root)
+    space = 0
+    height = 10
+    
+    printBinaryTree(root, space, height)
+    
+    
     
