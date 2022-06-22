@@ -55,6 +55,29 @@
 
 
 
+s="a*f+i/10"
+
+v="i= 2;f=2;a=4"
+v=v.replace(" ","")
+
+
+
+for i in range(len(s)):
+    for j in range(len(v)):
+
+        if s[i]==v[j]:
+            
+
+            s=s.replace(s[i],v[j+2])
+            break
+
+
+ 
+            
+print(s)
+
+
+
 
 
 

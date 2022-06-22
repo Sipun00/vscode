@@ -120,18 +120,29 @@
 # result=summ//c
 # print(result)
 
-n=int(input())
-s=int(input())
-sampleInput=input()
-result=-404
-A=list(sampleInput.split(" "))
+# n=int(input())
+# s=int(input())
+# sampleInput=input()
+# result=-404
+# A=list(sampleInput.split(" "))
+# 
+# for i in A:
+    # if len(i)==s:
+        # print (i)
+# 
+# 
+# 
 
-for i in A:
-    if len(i)==s:
-        print (i)
-
-
-
+class UserMainCode(object):
+    def checkconsecutive(cls,input1,input2):
+        input2.sort()
+        for i in range(input1-1):
+            if input2[i]+1==input2[i+1]:
+                continue
+            else:
+                return(0)
+        return 1
+print(UserMainCode().checkconsecutive(6,[1,9,2,4,0,3]))
 
 
 
